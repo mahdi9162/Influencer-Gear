@@ -63,9 +63,7 @@ body {
     margin: 8px;
 }
 
-img {
-    width: 100%;
-}
+
 
 
 /* End Repeated Color */
@@ -109,7 +107,7 @@ img {
 }
 
 .nav-icon {
-    margin-left: 10px;
+    margin-left: 14px;
     transition: all .35s ease;
 }
 
@@ -141,6 +139,15 @@ img {
     position: relative;
 }
 
+.banner-img img {
+    width: 100%;
+    transition: all .35s ease;
+}
+
+.banner-img img:hover {
+    transform: scale(1.05);
+}
+
 .circle {
     position: absolute;
     top: 0;
@@ -152,7 +159,99 @@ img {
 }
 
 
-/*  */
+/* Company Section*/
+.company-sec {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+    align-items: center;
+    position: relative;
+    padding: 40px 0;
+}
+
+.company-sec img {
+    transition: all .35s ease;
+}
+
+.company-sec img:hover {
+    transform: scale(1.5);
+}
+
+.company-sec::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient( to right, transparent, rgba(0, 0, 0, 0.15),transparent);
+}
+
+.company-sec::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient( to right, transparent, rgba(0, 0, 0, 0.15),transparent);
+}
+
+
+/* Popular Collections */
+.collections .sec-tittle {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+
+}
+
+.collection-card {
+    max-width: 400px;
+    background-color: white;
+    border-radius: 14px;
+    padding: 17px 14px;
+}
+
+.collection-card img {
+    width: 100%;
+}
+
+.collection-card h2 {
+    font-size: var(--h2-font);
+    font-weight: 500;
+    line-height: 40px;
+    margin: 5px 0 6px;
+}
+
+.collection-card .card-price {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.card-icons {
+    margin: 6px 0;
+}
+
+.card-icons i {
+    color: #fb8200;
+    font-size: 14px;
+}
+
+.card-icons .rate {
+    margin-left: 10px;
+}
+
+.card-descrip {
+    color: var(--tittle-color);
+}
 
 
 
@@ -172,18 +271,22 @@ img {
         overflow-x: hidden;
     } */
     .navbar,
-    .nav-links,
-    .banner { 
+    .nav-links { 
         flex-direction: column;
     }
 
-    /* Banner Section */
+    /* Header Section */
     header {
         padding: 0 14px;
     }
-    
-    main {
-        padding: 0 14px;
+
+    .nav-links {
+        margin-top: 20px;
+        gap: 0.5rem;
+    }
+
+     .banner { 
+        flex-direction: column-reverse;
     }
 
     .banner-text {
@@ -199,9 +302,28 @@ img {
     }
 
     .banner-img {
-        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     /* Main Section */
+     main {
+        padding: 0 14px;
+    }
+
+    /* Company section */
+    .company-sec {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-top: 80px;
+    }
+
+    .company-sec img:last-child {
+        grid-column: 1 / -1;
+    }
+
+    /* Popular Section */
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
 
 }
