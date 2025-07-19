@@ -292,9 +292,47 @@ body {
 }
 
 
+/* Footer Section */
+.footer-container {
+    justify-content: center;
+    background-color: #0A0826;
+    padding: 50px 0;
+    color: whitesmoke;
+}
 
+.footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
 
+.footer-content p {
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+}
 
+.footer-icon {
+   justify-content: center;
+   gap: 20px;
+   font-size: 1.5rem;
+   font-weight: 500;
+   margin-top: 15px;
+}
+
+.footer-icon i {
+    padding: 10px;
+    background-color: #22213C;
+    border-radius: 50%;
+    transition: all .35s ease;
+    cursor: pointer;
+}
+
+.footer-icon i:hover {
+    transform: scale(1.05) translateY(-5px);
+    color:  var(--main-color);
+}
 
 
 
@@ -362,6 +400,10 @@ body {
     /* Popular Section */
     .cards-container {
         grid-template-columns: 1fr;
+    }
+
+    .see-more {
+        text-align: center;
     }
 
     /* Feature Section */
